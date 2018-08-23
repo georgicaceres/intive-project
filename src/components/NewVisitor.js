@@ -4,7 +4,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import DayPickerInput from 'react-day-picker/DayPickerInput';
 import 'react-day-picker/lib/style.css';
-import MomentLocaleUtils, {formatDate, parseDate} from 'react-day-picker/moment';
+import { formatDate, parseDate } from 'react-day-picker/moment';
 import { updateForm, submitForm, submitInvalid } from '../actions';
 
 class NewVisitor extends Component {
@@ -14,7 +14,7 @@ class NewVisitor extends Component {
     };
 
     componentDidMount() {
-        return axios.get(`http://restcountries.eu/rest/v2/all`)
+        return axios.get(`//restcountries.eu/rest/v2/all`)
             .then(({data}) => this.setState({
                 countries: data.map(country => ({label: country.name, value: country.name}))
             }))
@@ -92,26 +92,6 @@ class NewVisitor extends Component {
                 </div>
 
                 <div className='field-box'>
-                    <label className='label-input' htmlFor="">
-                        Country
-                        <span className='focus-input'></span>
-                        <span className='error'>{showErrors && this.getErrorMessage('country')}</span>
-                    </label>
-                    <div className='select-box'>
-                        <Select
-                            className='form-select'
-                            placeholder='Choose a country...'
-                            styles={selectStyles}
-                            options={this.state.countries}
-                            value={form.country || null}
-                            maxMenuHeight={150}
-                            onChange={country => updateForm('country', country)}
-                        />
-                    </div>
-                    <span className='focus-input'></span>
-                </div>
-
-                <div className='field-box'>
                     <label className='label-input' htmlFor='birthday'>
                         Birthday
                         <span className='error'>{showErrors && this.getErrorMessage('birthday')}</span>
@@ -131,6 +111,26 @@ class NewVisitor extends Component {
                             selectedDays: form.birthday,
                         }}
                     />
+                    <span className='focus-input'></span>
+                </div>
+
+                <div className='field-box'>
+                    <label className='label-input' htmlFor="">
+                        Country
+                        <span className='focus-input'></span>
+                        <span className='error'>{showErrors && this.getErrorMessage('country')}</span>
+                    </label>
+                    <div className='select-box'>
+                        <Select
+                            className='form-select'
+                            placeholder='Choose a country...'
+                            styles={selectStyles}
+                            options={this.state.countries}
+                            value={form.country || null}
+                            maxMenuHeight={150}
+                            onChange={country => updateForm('country', country)}
+                        />
+                    </div>
                     <span className='focus-input'></span>
                 </div>
 

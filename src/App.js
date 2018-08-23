@@ -1,22 +1,16 @@
 import React, { Component } from 'react';
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { createStore, applyMiddleware } from 'redux';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import thunk from 'redux-thunk';
-import './style/css/App.css'
-
 import reducers from './reducers';
-
 import NewVisitor from './components/NewVisitor';
 import Greeting from './components/Greeting';
 import VisitorList from './components/VisitorList';
-
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+import './style/css/App.css'
 
 class App extends Component {
     render () {
         return (
-            <Provider store={createStoreWithMiddleware(reducers)}>
+            <Provider store={createStore(reducers)}>
                 <div>
                     <div className='container'>
                         <header>

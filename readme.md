@@ -1,13 +1,6 @@
 # TEST: INTIVE-FDV
 
-This project was developed for Intive-FDV. El proyecto está disponible en []() hosteado en Heroku y en []() se puede ver la documentación.
-
-## Table of Contents
-- [Specifications](#especificaciones)
-- [Tecnologías utilizadas](#tecnologías-utilizadas)
-- [Observaciones](#observaciones)
-- [Posibles mejoras](#posibles-mejoras)
-- [Setup](#setup)
+This project was developed for Intive-FDV. The project is available on [https://intive-project.herokuapp.com/](https://intive-project.herokuapp.com/).
 
 ## Specifications
 

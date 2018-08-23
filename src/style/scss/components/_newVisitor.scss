@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Poppins:400,500,600,700');
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	font-family: Poppins, sans-serif;
+}
+
+input {
+	outline: none;
+	border: none;
+}
+
+label {
+  display: block;
+  margin: 0;
+}
+
+button {
+	outline: none;
+	border: none;
+	background: transparent;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+.container-form {
+	@include box($green, 0.6)
+    width: 25%;
+}
+
+.form-title {
+    width: 100%;
+    display: block;
+    font-family: Poppins;
+    font-size: 20px;
+    color: $black;
+    line-height: 1.2;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.field-box {
+    width: 100%;
+    position: relative;
+    border: 2px solid #e6e6e6;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.label-input {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 11px;
+    color: #666666;
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding: 15px 0 2px 24px;
+}
+
+
+.form-input {
+    display: block;
+    width: 100%;
+    background: transparent;
+    font-family: Montserrat;
+    font-size: 16px;
+    color: black;
+    line-height: 1.2;
+    padding: 0 26px;
+    height: 40px;
+}
+
+.select-box {
+	padding: 0 14px;
+}
+
+.form-select {
+    display: block;
+    width: 100%;
+    background: transparent;
+    font-family: Montserrat;
+    font-size: 16px;
+    color: #404b46;
+    line-height: 1.2;
+    height: 40px;
+	border:0px;
+  	outline:0px;
+}
+
+.focus-input {
+    position: absolute;
+    display: block;
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    top: -1px;
+    left: -1px;
+    pointer-events: none;
+    border: 2px solid #6675df;
+    border-radius: 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+    transform: scaleX(1.1) scaleY(1.3);
+}
+
+input::-webkit-calendar-picker-indicator{
+    display: none;
+}
+
+input::placeholder {
+	color: #8C8C8C
+}
+
+.form-select:focus + .focus-input, .form-input:focus + .focus-input {
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.container-btn {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.form-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    margin: 0 5px;
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    background: #6675df;
+    font-family: Montserrat;
+	font-weight: 600;
+    font-size: 12px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s;
+}
+
+.form-btn:hover {
+    background: #404b46;
+}
+
+.error {
+	color: red;
+	font-size: 12px;
+	text-transform: none;
+	font-weight: normal;
+}
+
+.day-picker-input {
+	font-size: 12px
+}

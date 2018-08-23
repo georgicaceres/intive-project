@@ -1,0 +1,8 @@
+@mixin box($color, $intensity) {
+    box-sizing: border-box;
+    margin: 20px 0;
+    padding: 30px;
+    background-color: transparentize($color, $intensity);
+    border: 4px solid $color;
+    border-radius: 10px;
+}

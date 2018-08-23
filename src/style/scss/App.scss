@@ -1,0 +1,41 @@
+// Utilities
+@import 'util/variables';
+
+// Mixins
+@import 'util/mixins';
+
+@import 'components/all';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-image: url('Background17.jpg');
+ }
+
+header {
+    text-align: center;
+    background-color: #fff;
+    height: 50px;
+    padding: 10px;
+    color: white;
+    border-bottom: 2px solid $pink
+}
+
+.body-box {
+    display: flex;
+    justify-content: space-around;
+}
+
+.visitors-box {
+    display: flex;
+    flex-direction: column;
+    width: 50%
+}
+
+.author {
+    padding-right: 30px;
+    text-align: right;
+}

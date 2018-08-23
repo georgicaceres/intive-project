@@ -1,0 +1,11 @@
+.greeting-box {
+    @include box($yellow, 0.6)
+    height: 120px;
+    color: $pink;
+    text-align: center;
+}
+
+.userName {
+    font-weight: bold;
+    color: $pink
+}
